@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Scott's App</string>
+
+    <string name="hello_world">Hello world!世界你好！</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- self definition -->
+    <string name="home_title">淘车二手车-首页</string>
+    <string name="homeToCarInfo_btn_text">去二手车-实际车款页</string>
+    <string name="homeToDealer_btn_text">去二手车-咨询底价页</string>
+    <string name="homeToBargainer_btn_text">去二手车-我要砍价页</string>
+    <string name="homeToDealSuccess_btn_text">去二手车-咨询底价成功页</string>
+    <string name="homeToBargainSuccess_btn_text">去二手车-我要砍价成功页</string>
+
+    <string name="second_car_info_title">二手车-车款详情页</string>
+    <string name="secondCarInfoBackToHome_btn_text">二手车车款详情页->首页</string>
+    <string name="secondCarInfoBackToDealer_btn_text">二手车车款详情页->咨询底价页</string>
+    <string name="secondCarInfoBackToBargainer_btn_text">二手车车款详情页->我要砍价页</string>
+
+    <string name="second_car_dealer_title">二手车-咨询底价页</string>
+    <string name="secondCarDealerBackToCarInfo_btn_text">二手车咨询底价页->二车车款页</string>
+    <string name="secondCarDealerToDealSuccess_btn_text">二手车咨询底价页->询价成功页</string>
+    <string name="secondCarDealerBackToHome_btn_text">二手车咨询底价页->首页</string>
+
+    <string name="second_car_deal_succ_title">二手车-咨询底价成功页</string>
+    <string name="secondCarDealSuccBack2Dealer_btn_text">二手车询价成功页->询价页</string>
+    <string name="secondCarDealSuccBack2CarInfo_btn_text">二手车询价成功页->车款页</string>
+    <string name="secondCarDealSuccBack2Home_btn_text">二手车询价成功页->首页</string>
+
+    <string name="second_car_bargainer_title">二手车-我要砍价页</string>
+    <string name="secondCarBargainBackToCarInfo_btn_text">二手车砍价页->二手车车款页</string>
+    <string name="secondCarBargainerToBargainSuccess_btn_text">二手车砍价页->砍价成功页</string>
+    <string name="secondCarBargainBackToHome_btn_text">二手车砍价页->首页</string>
+
+    <string name="second_car_bargain_succ_title">二手车-砍价成功页</string>
+    <string name="secondCarBargainSuccBack2Bargain_btn_text">二手车砍价成功页->砍价页</string>
+    <string name="secondCarBargainSuccBack2CarInfo_btn_text">二手车砍价成功页->二手车车款页</string>
+    <string name="secondCarBargainSuccBack2Home_btn_text">二手车砍价成功页->首页</string>
+
+</resources>

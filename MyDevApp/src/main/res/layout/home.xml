@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.scott.dev.app.HomeActivity" >
+
+    <Button
+        android:id="@+id/home2CarInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:onClick="homeToSecondCarInfo"
+        android:text="@string/homeToCarInfo_btn_text" />
+    
+    <Button
+        android:id="@+id/home2SecondCarDealer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/home2CarInfo"
+        android:onClick="home2SecondCarDealer"
+        android:text="@string/homeToDealer_btn_text" />
+    <Button
+        android:id="@+id/home2SecondCarBargainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/home2SecondCarDealer"
+        android:onClick="home2SecondCarBargainer"
+        android:text="@string/homeToBargainer_btn_text" />
+
+</RelativeLayout>

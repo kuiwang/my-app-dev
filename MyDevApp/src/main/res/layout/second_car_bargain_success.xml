@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.scott.dev.app.BuySecondCarBargainSuccessActivity">
+
+    <Button
+        android:id="@+id/bargainSuccBackToCarInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="bargainSuccBackToCarInfo"
+        android:text="@string/secondCarBargainSuccBack2CarInfo_btn_text" />
+
+    <Button
+        android:id="@+id/bargainSuccBackToBargainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bargainSuccBackToCarInfo"
+        android:onClick="bargainSuccBackToBargainer"
+        android:text="@string/secondCarBargainSuccBack2Bargain_btn_text"></Button>
+
+    <Button
+        android:id="@+id/bargainSuccBackToHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/bargainSuccBackToCarInfo"
+        android:layout_below="@+id/bargainSuccBackToBargainer"
+        android:layout_marginTop="35dp"
+        android:onClick="bargainSuccBackToHome"
+        android:text="@string/secondCarBargainSuccBack2Home_btn_text" />
+
+
+</RelativeLayout>
