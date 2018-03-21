@@ -19,3 +19,22 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+#zamplus
+-keep public class com.zamplus.businesstrack.**
+-keepclassmembers class com.zamplus.businesstrack.** { public protected *;}
+
+#umeng
+-keep class com.umeng.commonsdk.** {*;}
+
+#talkingdata
+-dontwarn com.tendcloud.tenddata.**
+-keep class com.tendcloud.** {*;}
+-keep public class com.tendcloud.tenddata.** { public protected *;}
+-keepclassmembers class com.tendcloud.tenddata.**{
+public void *(***);
+}
+-keep class com.talkingdata.sdk.TalkingDataSDK {public *;}
+-keep class com.apptalkingdata.** {*;}
+-keep class dice.** {*; }
+-dontwarn dice.**

@@ -32,4 +32,15 @@
         android:onClick="carInfo2Bargain"
         android:text="@string/secondCarInfoBackToBargainer_btn_text" />
 
+    <EditText
+        android:id="@+id/edtCarInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/carInfo2Bargain"
+        android:layout_marginTop="97dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/second_car_info_title" />
+
 </RelativeLayout>

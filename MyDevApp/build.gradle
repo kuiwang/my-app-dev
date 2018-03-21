@@ -25,7 +25,9 @@ android {
     }
 
 }
-
+repositories {
+    mavenCentral()
+}
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
@@ -38,9 +40,29 @@ dependencies {
     //3rd party jar
     //zamplus in app/libs directory
     implementation files('libs/ZampSDK-1.2.2.jar')
+
     //umeng
     compile 'com.umeng.sdk:common:latest.integration'
     compile 'com.umeng.sdk:analytics:latest.integration'
+
     //talkingdata
     implementation files('libs/SaaS_AppAnalytics_Android_SDK_V4.0.15.jar')
+
+    //appsflyer
+    compile 'com.appsflyer:af-android-sdk:4+@aar'
+    compile 'com.android.installreferrer:installreferrer:1.0'
+
+    //mixpanel
+    //compile 'com.mixpanel.android:mixpanel-android:5.+'
+    //compile 'com.google.android.gms:play-services-gcm:7.5.0+'
+    //implementation 'com.google.android.gms:play-services-gcm:11.8.0'
+
+    //google analytics dependency on google play
+    //compile 'com.google.android.gms:play-services-analytics:9.2.0'
+    compile 'com.google.android.gms:play-services-analytics:11.8.0'
+    //compile 'com.google.android.gms:play-services-analytics:7.3.0'
+
 }
+
+//google analytics sdk for android v3
+apply plugin: 'com.google.gms.google-services'

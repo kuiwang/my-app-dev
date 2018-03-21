@@ -32,4 +32,15 @@
         android:onClick="home2SecondCarBargainer"
         android:text="@string/homeToBargainer_btn_text" />
 
+    <EditText
+        android:id="@+id/edtPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/home2SecondCarBargainer"
+        android:layout_marginTop="47dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/home_title" />
+
 </RelativeLayout>

@@ -32,4 +32,15 @@
         android:onClick="bargainerBackToHome"
         android:text="@string/secondCarDealerBackToHome_btn_text" />
 
+    <EditText
+        android:id="@+id/edtDealer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/bargainerBackToHome"
+        android:layout_marginTop="87dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/second_car_dealer_title" />
+
 </RelativeLayout>

@@ -22,7 +22,9 @@
         android:id="@+id/bargainSuccBackToBargainer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
         android:layout_below="@+id/bargainSuccBackToCarInfo"
+        android:layout_marginTop="24dp"
         android:onClick="bargainSuccBackToBargainer"
         android:text="@string/secondCarBargainSuccBack2Bargain_btn_text"></Button>
 
@@ -30,11 +32,22 @@
         android:id="@+id/bargainSuccBackToHome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/bargainSuccBackToCarInfo"
+        android:layout_alignParentStart="true"
         android:layout_below="@+id/bargainSuccBackToBargainer"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="26dp"
         android:onClick="bargainSuccBackToHome"
         android:text="@string/secondCarBargainSuccBack2Home_btn_text" />
+
+    <EditText
+        android:id="@+id/edtBargainSucc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/bargainSuccBackToHome"
+        android:layout_marginTop="48dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/second_car_bargain_succ_title" />
 
 
 </RelativeLayout>

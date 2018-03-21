@@ -13,9 +13,9 @@
         android:id="@+id/dealSuccBackToCarInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/dealSuccBackToDealer"
+        android:layout_marginTop="24dp"
         android:onClick="dealSuccessBackToCarInfo"
         android:text="@string/secondCarDealSuccBack2CarInfo_btn_text" />
 
@@ -30,21 +30,22 @@
         android:id="@+id/dealSuccBackToHome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/dealSuccBackToCarInfo"
+        android:layout_alignParentStart="true"
         android:layout_below="@+id/dealSuccBackToCarInfo"
         android:layout_marginTop="35dp"
         android:onClick="dealSuccessBackToHome"
         android:text="@string/secondCarDealSuccBack2Home_btn_text" />
-    <!--
-        <Button
-            android:id="@+id/dealSuccBackToHome"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/dealSuccBackToHome"
-            android:onClick="dealSuccessBackToHome"
-            android:text="@string/secondCarDealSuccBack2Home_btn_text" />
-        -->
+
+    <EditText
+        android:id="@+id/edtDealSucc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/dealSuccBackToHome"
+        android:layout_marginTop="72dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/second_car_deal_succ_title" />
+
 
 </RelativeLayout>

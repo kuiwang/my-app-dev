@@ -1,18 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.scott.dev.app">
+    <!--允许程序联网和发送统计数据的权限-->
     <uses-permission android:name="android.permission.INTERNET" />
+    <!--允许应用检测网络连接状态，在网络异常状态下避免数据发送，节省流量和电量-->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--允许应用以只读的方式访问手机设备的信息，通过获取的信息来唯一标识用户-->
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!--获取设备的MAC地址，同样用来标识唯一用户-->
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <!--umen recommend -->
     <!-- 推荐的权限 -->
     <!-- 添加如下权限，以便使用更多的第三方SDK和更精准的统计数据 -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!--可通过GPS获取设备的位置信息，用来修正用户的地域分布数据，使报表数据更准确-->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!--用于保存设备信息，以及记录日志-->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!--mixpanel-->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <!--TD optional-->
+    <!--获取当前应用是否在显示应用，可以更精准的统计用户活跃-->
+    <!--<uses-permission android:name="android.permission.GET_TASKS" />-->
 
     <application
         android:allowBackup="true"
@@ -42,6 +54,32 @@
             android:name="UMENG_CHANNEL"
             android:value="app-dev-with-umeng-sdk" />
 
+        <!--talkingdata -->
+        <service
+            android:name="com.talkingdata.sdk.TDAntiCheatingService"
+            android:process="com.talkingdata.sdk.TDAntiCheatingService">  <!--用户质量评估Service可以配置在主进程或者单独进程-->
+            <intent-filter>
+                <action android:name="com.talkingdata.sdk.TDAntiCheatingService" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="TD_APP_ID"
+            android:value="1B28F4596FAC01B3A62C63B263503274" />
+        <meta-data
+            android:name="TD_CHANNEL_ID"
+            android:value="app-dev-with-talkingdata-sdk" />
+
+        <!--google tag manager-->
+        <!-- Used for install referrer tracking-->
+        <service android:name="com.google.android.gms.tagmanager.InstallReferrerService" />
+        <receiver
+            android:name="com.google.android.gms.tagmanager.InstallReferrerReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
 
 
         <!--3rd party ended-->
@@ -49,7 +87,7 @@
         <!-- main activity -->
         <activity
             android:name=".HomeActivity"
-            android:label="@string/home_title" >
+            android:label="@string/home_title">
             <intent-filter>
 
                 <!-- 段代码放在哪个Activity里，那个Activity就作为应用程序默认启动的Activity。即程序运行后的默认启动的Activity -->
@@ -62,32 +100,30 @@
         <!-- product activity -->
         <activity
             android:name=".SecondHandCarInfoActivity"
-            android:label="@string/second_car_info_title" >
-        </activity>
+            android:label="@string/second_car_info_title"></activity>
 
         <!-- cart activity -->
         <activity
             android:name=".BuySecondCarDealerActivity"
-            android:label="@string/second_car_dealer_title" >
-        </activity>
+            android:label="@string/second_car_dealer_title"></activity>
 
         <!-- orderinfo activity -->
         <activity
             android:name=".BuySecondCarDealSuccessActivity"
-            android:label="@string/second_car_deal_succ_title" >
-        </activity>
+            android:label="@string/second_car_deal_succ_title"></activity>
 
         <!-- order submit activity -->
         <activity
             android:name=".BuySecondCarBargainerActivity"
-            android:label="@string/second_car_bargainer_title" >
-        </activity>
+            android:label="@string/second_car_bargainer_title"></activity>
 
         <activity
             android:name=".BuySecondCarBargainSuccessActivity"
-            android:label="@string/second_car_bargain_succ_title" >
-        </activity>
+            android:label="@string/second_car_bargain_succ_title"></activity>
+
+
 
     </application>
+
 
 </manifest>
