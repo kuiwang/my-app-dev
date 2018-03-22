@@ -8,8 +8,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.google.android.gms.analytics.GoogleAnalytics;
-import com.google.android.gms.analytics.Tracker;
+import com.appsflyer.AppsFlyerConversionListener;
+import com.appsflyer.AppsFlyerLib;
+import com.scott.dev.app.util.CommonConsts;
 import com.tendcloud.tenddata.TCAgent;
 import com.umeng.analytics.MobclickAgent;
 import com.umeng.analytics.dplus.UMADplus;
@@ -21,7 +22,6 @@ import java.util.Map;
 
 //二手车询价Activity
 public class BuySecondCarDealSuccessActivity extends Activity {
-    private Tracker tracker;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -100,9 +100,43 @@ public class BuySecondCarDealSuccessActivity extends Activity {
 
         //google analytics sdk for android v3 (LEGANCY!!!)
         // Obtain the shared Tracker instance.
-        tracker = GoogleAnalytics.getInstance(context).newTracker(R.xml.global_tracker);
 
-        tracker.send(params);
+        //appsflyer
+        AppsFlyerLib appsFlyerLib = AppsFlyerLib.getInstance();
+        AppsFlyerConversionListener conversionDataListener = new AppsFlyerConversionListener() {
+            @Override
+            public void onInstallConversionDataLoaded(Map<String, String> map) {
+                if(!map.isEmpty()){
+                    map.put("deal_convInfo","186_1234_5678,100");
+                }else{
+                    map = new HashMap<String,String>();
+                    map.put("convInfo","186_1234_5678,100");
+                }
+
+            }
+
+            @Override
+            public void onInstallConversionFailure(String s) {
+
+            }
+
+            @Override
+            public void onAppOpenAttribution(Map<String, String> map) {
+
+            }
+
+            @Override
+            public void onAttributionFailure(String s) {
+
+            }
+
+        };
+
+        String appsFlyerId = appsFlyerLib.getAppsFlyerUID(context);
+        appsFlyerLib.init(CommonConsts.AF_DEV_KEY,conversionDataListener);
+        appsFlyerLib.trackAppLaunch(context,pageName);
+        umParam.put("self_af_id",appsFlyerId);
+        appsFlyerLib.trackEvent(context,pageName,umParam);
 
         setContentView(R.layout.second_car_deal_success);
 

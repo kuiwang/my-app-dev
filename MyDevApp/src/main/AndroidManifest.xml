@@ -63,6 +63,7 @@
             </intent-filter>
         </service>
 
+
         <meta-data
             android:name="TD_APP_ID"
             android:value="1B28F4596FAC01B3A62C63B263503274" />
@@ -70,12 +71,20 @@
             android:name="TD_CHANNEL_ID"
             android:value="app-dev-with-talkingdata-sdk" />
 
+
         <!--google tag manager-->
         <!-- Used for install referrer tracking-->
-        <service android:name="com.google.android.gms.tagmanager.InstallReferrerService" />
+        <!--<service android:name="com.google.android.gms.tagmanager.InstallReferrerService" />
         <receiver
             android:name="com.google.android.gms.tagmanager.InstallReferrerReceiver"
             android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>-->
+
+        <!--appsflyer-->
+        <receiver android:name="com.appsflyer.MultipleInstallBroadcastReceiver" android:exported="true">
             <intent-filter>
                 <action android:name="com.android.vending.INSTALL_REFERRER" />
             </intent-filter>
@@ -124,6 +133,5 @@
 
 
     </application>
-
 
 </manifest>

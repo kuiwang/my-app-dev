@@ -48,10 +48,6 @@ dependencies {
     //talkingdata
     implementation files('libs/SaaS_AppAnalytics_Android_SDK_V4.0.15.jar')
 
-    //appsflyer
-    compile 'com.appsflyer:af-android-sdk:4+@aar'
-    compile 'com.android.installreferrer:installreferrer:1.0'
-
     //mixpanel
     //compile 'com.mixpanel.android:mixpanel-android:5.+'
     //compile 'com.google.android.gms:play-services-gcm:7.5.0+'
@@ -59,10 +55,19 @@ dependencies {
 
     //google analytics dependency on google play
     //compile 'com.google.android.gms:play-services-analytics:9.2.0'
-    compile 'com.google.android.gms:play-services-analytics:11.8.0'
+    //compile 'com.google.android.gms:play-services-analytics:11.8.0'
     //compile 'com.google.android.gms:play-services-analytics:7.3.0'
 
+    //firebase
+    //compile 'com.google.firebase:firebase-core:11.8.0'
+
+    //appsflyer
+    compile 'com.appsflyer:af-android-sdk:4+@aar'
+    compile 'com.android.installreferrer:installreferrer:1.0'
 }
 
 //google analytics sdk for android v3
-apply plugin: 'com.google.gms.google-services'
+//apply plugin: 'com.google.gms.google-services'
+
+//firebase
+//apply plugin: 'com.google.gms.google-services'
